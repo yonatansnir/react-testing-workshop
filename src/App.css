@@ -1,0 +1,169 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: #4CAF50;
+  margin-bottom: 20px;
+
+  & span {
+    cursor: pointer;
+  }
+}
+
+/* TodoForm styles */
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* TodoList styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  flex: 1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+li span:hover {
+  color: #4CAF50;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Delete button */
+li button {
+  background-color: #f44336;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.error-message {
+  text-align: center;
+  color: #f44336;
+  font-size: 16px;
+  background-color: #ffecec;
+  border: 1px solid #f5c2c2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.skeleton {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skeleton-text {
+  height: 16px;
+  width: 50%;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+.stats-section {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.stats-section div {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
