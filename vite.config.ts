@@ -1,6 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import { expressPlugin } from "./plugins/express-plugin"
 
 export default defineConfig({
-    plugins: [expressPlugin()]
+    plugins: [expressPlugin()],
+    test: {
+        environment: "jsdom"
+    }
 })
